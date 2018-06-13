@@ -10,7 +10,7 @@ package interfaces;
  *
  * @author 11645
  */
-public interface Fila<Tipo> extends Iterable<Tipo>{
+public interface IFila<Tipo> extends Iterable<Tipo>{
     public void enfileirar(Tipo elemento);
     public Tipo desenfileirar();
     public int tamanho();
