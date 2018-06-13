@@ -77,7 +77,7 @@ public class Fila<Tipo> implements IFila<Tipo>{
 
     }
     protected void remover(){
-        int posicao = 0;
+        int posicao = (this.tamanho() + 1) - 1;
         this.elements[posicao] = null;
         for(int i = posicao; i < this.contador; i++)
         {
@@ -114,18 +114,15 @@ public class Fila<Tipo> implements IFila<Tipo>{
         return this.obter(0);    
     }
 
-    @Override
+     @Override
     public boolean vazio() {
         return this.contador == 0;
     }
 
     @Override
     public void enfileirar(Tipo elemento) {
-        if(this.tamanho() == 0) {
-            this.adicionar(0, elemento);
-        } else {
-            this.adicionar(elemento);
-        }
+        int pos = 0;
+        this.adicionar(pos, elemento);
     }
 
     @Override

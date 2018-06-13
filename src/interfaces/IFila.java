@@ -15,6 +15,6 @@ public interface IFila<Tipo> extends Iterable<Tipo>{
     public Tipo desenfileirar();
     public int tamanho();
     public Tipo primeiro();
-    public int vazio();
+    public boolean vazio();
     public void limpar();
 }
